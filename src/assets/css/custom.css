@@ -39,6 +39,13 @@ a.connect{
 a.connect span{
     margin-left: 5px;
 }
+a.nav-link.whitepaper{
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    color:#fff !important;
+    margin-right: 1rem;
+}
 
 .ml12 {
     font-weight: 200;

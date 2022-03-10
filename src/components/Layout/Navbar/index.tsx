@@ -26,6 +26,13 @@ const Navbar = () => {
           <img src={VitalLogo} className='vital-network-logo' />
         </Link>
         <Nav className='ml-auto'>
+          <Nav.Link
+            className='whitepaper mt-3'
+            target='_blank'
+            href='https://vitalnetwork.medium.com/vital-network-white-paper-25cd8c91e4f3'
+          >
+            Whitepaper
+          </Nav.Link>
           {isLoggedIn ? (
             <Link
               to={routeNames.unlock}
