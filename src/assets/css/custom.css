@@ -117,7 +117,7 @@ ul li a:hover {
     vertical-align:middle;
     width: 1em;
     height: 1em;
-    border: 1px solid black;
+    border: 1px solid #004E79;
     border-radius: 50px;
     background-size: contain;
     background-image: url(../img/token.png);
@@ -187,6 +187,11 @@ ul li a:hover {
 
 .radius{
     border-radius: 10px !important;
+}
+
+.badge{
+    top: 0.5rem;
+    right: 0.5rem
 }
 
 /* Progress bar */
