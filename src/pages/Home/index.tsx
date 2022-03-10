@@ -29,9 +29,16 @@ const Home = () => {
                 8,568,000,000,000
                 <span className='vital_token'></span>
               </span>
+            </div>
+          </div>
+        </div>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-12'>
               <div className='progress'>
                 <div
                   className='progress-bar progress-round progress-bar-striped progress-bar-animated'
+                  /*style='width: 30%'*/
                   role='progressbar'
                   aria-valuenow={75}
                   aria-valuemin={0}
