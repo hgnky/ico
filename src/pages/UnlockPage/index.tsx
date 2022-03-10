@@ -28,19 +28,22 @@ export const UnlockRoute: () => JSX.Element = () => {
             <ExtensionLoginButton
               callbackRoute={routeNames.dashboard}
               loginButtonText={'Extension'}
+              className={'unlockButton'}
             />
             <WebWalletLoginButton
               callbackRoute={routeNames.dashboard}
               loginButtonText={'Web wallet'}
+              className={'unlockButton'}
             />
             <LedgerLoginButton
               loginButtonText={'Ledger'}
               callbackRoute={routeNames.dashboard}
-              className={'test-class_name'}
+              className={'unlockButton'}
             />
             <WalletConnectLoginButton
               callbackRoute={routeNames.dashboard}
               loginButtonText={'Maiar'}
+              className={'unlockButton'}
             />
           </div>
         </div>

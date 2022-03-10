@@ -33,6 +33,7 @@ a.connect{
     background-color: #fff;
     border-radius:5px;
     border: none;
+    margin-top: 0;
     color:#111;
 }
 
@@ -59,6 +60,10 @@ a.nav-link.whitepaper{
 .ml12 .letter {
     display: inline-block;
     line-height: 1em;
+}
+
+.p-4{
+    padding-bottom: 0 !important;
 }
 
 ul {
@@ -201,6 +206,11 @@ ul li a:hover {
     right: 0.5rem
 }
 
+.unlockButton{
+    display: block;
+    background-color: #004E79;
+}
+
 /* Progress bar */
 
 .progress {
@@ -262,5 +272,13 @@ ul li a:hover {
 
     .col-6-title{
         width: 100%;
+    }
+
+    .presentation-block{
+        margin-top: 15%;
+    }
+
+    a.nav-link.whitepaper{
+        display: none;
     }
 }

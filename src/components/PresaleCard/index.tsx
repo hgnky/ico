@@ -8,7 +8,7 @@ class PresaleCard extends React.Component<any, any> {
   render() {
     return (
       <div className='col mb-5'>
-        <div className='card h-80 radius'>
+        <div className='card h-100 radius'>
           <div className='badge bg-dark text-white position-absolute'>
             {this.props.round}
           </div>
@@ -29,7 +29,7 @@ class PresaleCard extends React.Component<any, any> {
               </span>
             </div>
           </div>
-          <div className='card-footer p-4 pt-0 border-top-0 bg-transparent'>
+          <div className='card-footer pt-0 border-top-0 bg-transparent'>
             <div className='text-center'>
               {this.props.isLogged ? (
                 <Link
