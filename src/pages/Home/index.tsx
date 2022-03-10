@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { dAppName } from 'config';
 import { routeNames } from 'routes';
@@ -50,18 +50,21 @@ const Home = () => {
               round='Round 1'
               supply='3,334,000,000,000'
               egldprice='0.75 EGLD'
+              vitalprice='0.00000000075 EGLD'
             />
             <PresaleCard
               isLogged={isLoggedIn}
               round='Round 2'
               supply='3,333,000,000,000'
               egldprice='1.15 EGLD'
+              vitalprice='0.00000000115 EGLD'
             />
             <PresaleCard
               isLogged={isLoggedIn}
               round='Round 3'
               supply='3,333,000,000,000'
               egldprice='1.45 EGLD'
+              vitalprice='0.00000000145 EGLD'
             />
           </div>
         </div>

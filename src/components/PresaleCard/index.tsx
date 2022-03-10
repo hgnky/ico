@@ -24,6 +24,7 @@ class PresaleCard extends React.Component<any, any> {
               </span>
               <span className='amount'>1</span>
               <span className='plus'>
+                {console.log(this.props.count)}
                 <i className='fa fa-plus'></i>
               </span>
             </div>
@@ -49,10 +50,10 @@ class PresaleCard extends React.Component<any, any> {
               )}
             </div>
           </div>
-          <p>
-            1 VITAL = 0.00000000075 EGLD
+          <p className='supply'>
+            1 VITAL = {this.props.vitalprice}
             <br />
-            0.75 EGLD for 1,000,000,000 VITAL
+            {this.props.egldprice} for 1,000,000,000 VITAL
           </p>
         </div>
       </div>
