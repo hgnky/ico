@@ -4,7 +4,8 @@ import { Navbar as BsNavbar, NavItem, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { dAppName } from 'config';
 import { routeNames } from 'routes';
-import { ReactComponent as ElrondLogo } from './../../../assets/img/elrond.svg';
+import EclairConnectBlack from './../../../assets/img/eclair_black.png';
+import VitalLogo from './../../../assets/img/logo_header.png';
 
 const Navbar = () => {
   const { address } = useGetAccountInfo();
@@ -16,23 +17,34 @@ const Navbar = () => {
   const isLoggedIn = Boolean(address);
 
   return (
-    <BsNavbar className='bg-white border-bottom px-4 py-3'>
+    <BsNavbar className='px-4 py-3'>
       <div className='container-fluid'>
         <Link
           className='d-flex align-items-center navbar-brand mr-0'
           to={isLoggedIn ? routeNames.dashboard : routeNames.home}
         >
-          <ElrondLogo className='elrond-logo' />
-          <span className='dapp-name text-muted'>{dAppName}</span>
+          <img src={VitalLogo} className='vital-network-logo' />
         </Link>
-
         <Nav className='ml-auto'>
-          {isLoggedIn && (
-            <NavItem>
-              <button className='btn btn-link' onClick={handleLogout}>
-                Close
-              </button>
-            </NavItem>
+          {isLoggedIn ? (
+            <Link
+              to={routeNames.unlock}
+              className='btn connect mt-3'
+              data-testid='loginBtn'
+              onClick={handleLogout}
+            >
+              <img width='10' height='15' src={EclairConnectBlack} />
+              <span>Disconnect</span>
+            </Link>
+          ) : (
+            <Link
+              to={routeNames.unlock}
+              className='btn connect mt-3'
+              data-testid='loginBtn'
+            >
+              <img width='10' height='15' src={EclairConnectBlack} />
+              <span>Connect</span>
+            </Link>
           )}
         </Nav>
       </div>
