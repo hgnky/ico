@@ -66,6 +66,10 @@ a.nav-link.whitepaper{
     padding-bottom: 0 !important;
 }
 
+.card{
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 0.0625em 0.0625em, rgba(255, 255, 255, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
 ul {
     padding:0;
     margin:0;
@@ -181,6 +185,10 @@ ul li a:hover {
 .inactive-sale{
     cursor: not-allowed;
     opacity: 50%;
+}
+
+.active-sale{
+    top:10px;
 }
 
 .amount{

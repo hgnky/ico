@@ -53,6 +53,7 @@ const Home = () => {
         <div className='container'>
           <div className='row'>
             <PresaleCard
+              isActive
               isLogged={isLoggedIn}
               round='Round 1'
               supply='3,334,000,000,000'
