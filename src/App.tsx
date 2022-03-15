@@ -6,9 +6,7 @@ import PageNotFound from 'pages/PageNotFound';
 import { routeNames } from 'routes';
 import routes from 'routes';
 import '@elrondnetwork/dapp-core/build/index.css';
-
-const environment = 'devnet';
-
+import { environment } from 'config';
 const {
   TransactionsToastList,
   SignTransactionsModals,
