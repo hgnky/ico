@@ -133,7 +133,7 @@ ul li a:hover {
     vertical-align:middle;
     width: 1em;
     height: 1em;
-    border: 1px solid #004E79;
+    border: 1px solid #000;
     border-radius: 50px;
     background-size: contain;
     background-image: url(../img/token.png);
