@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className='container-fluid'>
         <Link
           className='d-flex align-items-center navbar-brand mr-0'
-          to={isLoggedIn ? routeNames.home : routeNames.home}
+          to={routeNames.home}
         >
           <img src={VitalLogo} className='vital-network-logo' />
         </Link>

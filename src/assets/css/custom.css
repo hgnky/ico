@@ -225,6 +225,18 @@ a.connect:active {
 
 /* Progress bar */
 
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #004e79;
+  transition: width 3s ease;
+}
+
 .progress {
   display: flex;
   height: 3rem;
@@ -238,6 +250,27 @@ a.connect:active {
 .progress-round {
   border-right: 2px solid white;
   background-color: #004e79;
+}
+
+#personModal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 .progress-bar-striped {
