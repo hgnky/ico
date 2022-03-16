@@ -50,7 +50,7 @@ function PresaleCard(props: any) {
                       );
                   }}
                 >
-                  Buy for {props.egldprice * amount} eGLD
+                  Buy for {props.egldprice * amount} EGLD
                 </span>
               ) : (
                 <Link
@@ -66,7 +66,7 @@ function PresaleCard(props: any) {
         <p className='supply'>
           1 VITAL = {props.vitalprice}
           <br />
-          {props.egldprice} for 1,000,000,000 VITAL
+          {props.egldprice} EGLD for 1,000,000,000 VITAL
         </p>
       </div>
     </div>
