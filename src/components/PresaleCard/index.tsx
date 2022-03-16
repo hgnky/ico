@@ -68,7 +68,7 @@ function PresaleCard(props: any) {
         <p className='supply'>
           1 VITAL = {props.vitalprice}
           <br />
-          {props.egldprice} for 1,000,000,000 VITAL
+          {props.egldprice} eGLD for 1,000,000,000 VITAL
         </p>
       </div>
     </div>
