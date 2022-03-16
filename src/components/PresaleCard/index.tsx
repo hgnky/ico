@@ -6,6 +6,8 @@ import EclairConnectBlack from './../../assets/img/eclair_black.png';
 
 function PresaleCard(props: any) {
   const [amount, setAmount] = useState(1);
+  const [showMaxPerTransactionWarning, setShowMaxPerTransactionWarning] =
+    useState(false);
   return (
     <div className='col mb-5' style={{ opacity: props.isActive ? 1 : 0.5 }}>
       <div className='card h-100 radius'>
@@ -23,6 +25,7 @@ function PresaleCard(props: any) {
               className='minus'
               onClick={() => {
                 if (amount > 1 && props.isActive) setAmount(amount - 1);
+                if (amount == 20) setShowMaxPerTransactionWarning(false);
               }}
             >
               <i className='fa fa-minus'></i>
@@ -32,6 +35,7 @@ function PresaleCard(props: any) {
               className='plus'
               onClick={() => {
                 if (amount < 20 && props.isActive) setAmount(amount + 1);
+                else setShowMaxPerTransactionWarning(true);
               }}
             >
               <i className='fa fa-plus'></i>
@@ -64,6 +68,11 @@ function PresaleCard(props: any) {
                 </Link>
               ))}
           </div>
+          {showMaxPerTransactionWarning && (
+            <div className='text-center text-danger'>
+              You can only buy up to 20B VITAL per transaction!
+            </div>
+          )}
         </div>
         <p className='supply'>
           1 VITAL = {props.vitalprice}
