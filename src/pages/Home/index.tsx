@@ -1,4 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import {
+  useGetAccountInfo,
+  DappUI,
+  refreshAccount,
+  sendTransactions
+} from '@elrondnetwork/dapp-core';
+import axios from 'axios';
+import { ProgressBar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import {
   contractAddress,
@@ -8,14 +16,6 @@ import {
 } from 'config';
 import { routeNames } from 'routes';
 import PresaleCard from '../../components/PresaleCard';
-import {
-  useGetAccountInfo,
-  DappUI,
-  refreshAccount,
-  sendTransactions
-} from '@elrondnetwork/dapp-core';
-import axios from 'axios';
-import { ProgressBar } from 'react-bootstrap';
 
 const Home = () => {
   const { address } = useGetAccountInfo();
@@ -49,9 +49,9 @@ const Home = () => {
     const { sessionId /*, error*/ } = await sendTransactions({
       transactions: pingTransaction,
       transactionsDisplayInfo: {
-        processingMessage: 'Processing VITAL transaction',
-        errorMessage: 'An error has occured during VITAL purchase',
-        successMessage: 'VITAL purchase transaction successful'
+        processingMessage: 'Processing VITAL purchase',
+        errorMessage: 'Error occured during VITAL purchase',
+        successMessage: 'VITAL purchase successful'
       },
       redirectAfterSign: false
     });

@@ -10,7 +10,10 @@ $headings-font-weight: 300 !important;
 $a: #1392ff;
 
 .dapp-core-ui-component .toast-messages {
-  width: 28.5rem;
+  width: 22rem;
+  margin: auto;
+}
+.dapp-core-ui-component .toast-messages .toast.toast-visible .progress {
   margin: auto;
 }
 

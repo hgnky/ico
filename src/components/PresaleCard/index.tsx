@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { ReactComponent as HeartIcon } from '../../../assets/img/heart.svg';
 import { Link } from 'react-router-dom';
 import { routeNames } from 'routes';
+import { ReactComponent as HeartIcon } from '../../../assets/img/heart.svg';
 import EclairConnectBlack from './../../assets/img/eclair_black.png';
 
 function PresaleCard(props: any) {

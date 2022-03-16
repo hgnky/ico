@@ -225,6 +225,10 @@ a.connect:active {
 
 /* Progress bar */
 
+.dapp-core-ui-component .toast-messages .toast.toast-visible .progress {
+  margin: auto;
+}
+
 .progress {
   display: flex;
   height: 3rem;
