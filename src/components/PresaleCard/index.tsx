@@ -8,6 +8,7 @@ function PresaleCard(props: any) {
   const [amount, setAmount] = useState(1);
   const [showMaxPerTransactionWarning, setShowMaxPerTransactionWarning] =
     useState(false);
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className='col mb-5' style={{ opacity: props.isActive ? 1 : 0.5 }}>
       <div className='card h-100 radius'>
@@ -59,13 +60,15 @@ function PresaleCard(props: any) {
                   Buy for {props.egldprice * amount} EGLD
                 </span>
               ) : (
-                <Link
-                  to={routeNames.unlock}
+                <span
                   className='btn connect mt-3'
                   data-testid='loginBtn'
+                  onClick={() => {
+                    setShowModal(true);
+                  }}
                 >
-                  <span>Connect</span>
-                </Link>
+                  Connect
+                </span>
               ))}
           </div>
           {showMaxPerTransactionWarning && (

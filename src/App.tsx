@@ -7,6 +7,7 @@ import { routeNames } from 'routes';
 import routes from 'routes';
 import '@elrondnetwork/dapp-core/build/index.css';
 import { environment } from 'config';
+import UnlockRoute from 'pages/UnlockPage';
 const {
   TransactionsToastList,
   SignTransactionsModals,
@@ -29,7 +30,7 @@ const App = () => {
           <Routes>
             <Route
               path={routeNames.unlock}
-              element={<UnlockPage loginRoute={routeNames.home} />}
+              element={<UnlockRoute loginRoute={routeNames.home} />}
             />
             {routes.map((route: any, index: number) => (
               <Route

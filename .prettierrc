@@ -7,8 +7,9 @@
   "jsxBracketSameLine": false,
   "arrowParens": "always",
   "trailingComma": "none",
+  "linebreak-style": ["error", "windows"],
   "editor.formatOnSave": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-}
+  }
 }

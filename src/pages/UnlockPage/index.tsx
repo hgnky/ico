@@ -1,8 +1,9 @@
 import React from 'react';
 import { DappUI, useGetLoginInfo } from '@elrondnetwork/dapp-core';
 import { routeNames } from 'routes';
+import UnlockCard from 'components/UnlockCard';
 
-export const UnlockRoute: () => JSX.Element = () => {
+function UnlockRoute(props: any) {
   const {
     ExtensionLoginButton,
     WebWalletLoginButton,
@@ -10,6 +11,9 @@ export const UnlockRoute: () => JSX.Element = () => {
     WalletConnectLoginButton
   } = DappUI;
   const { isLoggedIn } = useGetLoginInfo();
+  const showHideModal = props.noShow
+    ? 'modal display-none'
+    : 'modal display-none';
 
   React.useEffect(() => {
     if (isLoggedIn) {
@@ -18,38 +22,12 @@ export const UnlockRoute: () => JSX.Element = () => {
   }, [isLoggedIn]);
 
   return (
-    <div className='home d-flex flex-fill align-items-center'>
+    <div className='home d-flex flex-fill align-items-center d'>
       <div className='m-auto' data-testid='unlockPage'>
-        <div className='card my-4 text-center'>
-          <div className='card-body py-4 px-2 px-sm-2 mx-lg-4'>
-            <h4 className='mb-4'>Login</h4>
-            <p className='mb-4'>pick a login method</p>
-
-            <ExtensionLoginButton
-              callbackRoute={routeNames.dashboard}
-              loginButtonText={'Extension'}
-              className={'unlockButton'}
-            />
-            <WebWalletLoginButton
-              callbackRoute={routeNames.dashboard}
-              loginButtonText={'Web wallet'}
-              className={'unlockButton'}
-            />
-            <LedgerLoginButton
-              loginButtonText={'Ledger'}
-              callbackRoute={routeNames.dashboard}
-              className={'unlockButton'}
-            />
-            <WalletConnectLoginButton
-              callbackRoute={routeNames.dashboard}
-              loginButtonText={'Maiar'}
-              className={'unlockButton'}
-            />
-          </div>
-        </div>
+        <UnlockCard></UnlockCard>
       </div>
     </div>
   );
-};
+}
 
 export default UnlockRoute;
