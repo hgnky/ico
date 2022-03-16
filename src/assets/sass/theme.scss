@@ -1,13 +1,18 @@
 /* Bootstrap overrides
 -------------------------------------------------- */
 
-  $body: #000;
-  $headings-font-weight: 300 !important;
-  $primary: #1b46c2;
-  $light: #fafafa;
+$body: #000;
+$headings-font-weight: 300 !important;
+$primary: #1b46c2;
+$light: #fafafa;
 
-  $headings-font-weight: 300 !important;
-  $a: #1392ff;
+$headings-font-weight: 300 !important;
+$a: #1392ff;
+
+.dapp-core-ui-component .toast-messages {
+  width: 28.5rem;
+  margin: auto;
+}
 
 /* Do not move the imports from here.
 Override Bootstrap variables only above.
@@ -18,8 +23,6 @@ Override Bootstrap variables only above.
 @import '~bootstrap/scss/bootstrap.scss';
 
 @import '~bootstrap/scss/reboot';
-
-
 
 .custom-classname.btn-primary {
   background-color: green;
@@ -95,11 +98,10 @@ html {
   .transaction-icon {
     border-radius: 50%;
     width: 40px;
-    height: 40px;
+    height: 200px;
   }
 
   &.table {
-
     .transaction-hash .trim {
       @include media-breakpoint-down(xl) {
         max-width: none;
@@ -115,7 +117,8 @@ html {
       }
     }
 
-    td, tr {
+    td,
+    tr {
       padding: 0.65rem;
     }
 

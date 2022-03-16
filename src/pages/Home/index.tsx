@@ -105,10 +105,11 @@ const Home = () => {
               isActive={true}
               isLogged={isLoggedIn}
               round='Round 1'
-              supply={3334000000000}
+              supply={balance}
               egldprice={0.75}
               vitalprice='0.00000000075 EGLD'
               transaction={sendBuyTransaction}
+              showTooltip={true}
             />
             <PresaleCard
               isLogged={isLoggedIn}
