@@ -226,10 +226,6 @@ a.connect:active {
   display: none;
 }
 
-.unlockButton_leadText{
-
-}
-
 /* Progress bar */
 
 .dapp-core-ui-component .toast-messages .toast.toast-visible .progress {
