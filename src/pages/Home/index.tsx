@@ -69,12 +69,12 @@ function Home(props: any) {
               <h1>
                 <span className='vital_token'></span> VITAL ICO
               </h1>
-              <p>
+              <p className='text-center text-white'>
                 Initial Coin Offering (ICO) VITAL
                 <br />
                 Supply 10,000,000,000,000
               </p>
-              <p>Remaining supply</p>
+              <p className='text-center text-white'>Remaining supply</p>
               <span className='token_remain'>
                 {supply.toLocaleString()}
                 <span className='vital_token'></span>
