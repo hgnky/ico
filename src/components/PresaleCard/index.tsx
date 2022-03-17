@@ -5,7 +5,6 @@ import { ReactComponent as HeartIcon } from '../../../assets/img/heart.svg';
 import EclairConnectBlack from './../../assets/img/eclair_black.png';
 
 function PresaleCard(props: any) {
-  console.log(props);
   const [amount, setAmount] = useState(1);
   const [showMaxPerTransactionWarning, setShowMaxPerTransactionWarning] =
     useState(false);
@@ -60,15 +59,16 @@ function PresaleCard(props: any) {
                   Buy for {props.egldprice * amount} EGLD
                 </span>
               ) : (
-                <span
+                <Link
+                  to={routeNames.unlock}
                   className='btn connect mt-3'
                   data-testid='loginBtn'
-                  onClick={() => {
-                    props.setShowModal(true);
-                  }}
+                  // onClick={() => {
+                  //   props.setShowModal(true);
+                  // }}
                 >
-                  &#128498; Connect
-                </span>
+                  <span>&#128498; Connect</span>
+                </Link>
               ))}
           </div>
           {showMaxPerTransactionWarning && (
