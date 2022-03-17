@@ -12,7 +12,7 @@ function UnlockCard(props: any) {
   } = DappUI;
   return (
     <Modal
-      show={props.show}
+      show={true}
       size='sm'
       aria-labelledby='contained-modal-title-vcenter'
       centered

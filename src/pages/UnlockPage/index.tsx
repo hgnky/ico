@@ -11,9 +11,6 @@ function UnlockRoute(props: any) {
     WalletConnectLoginButton
   } = DappUI;
   const { isLoggedIn } = useGetLoginInfo();
-  const showHideModal = props.noShow
-    ? 'modal display-none'
-    : 'modal display-none';
 
   React.useEffect(() => {
     if (isLoggedIn) {
@@ -24,7 +21,7 @@ function UnlockRoute(props: any) {
   return (
     <div className='home d-flex flex-fill align-items-center d'>
       <div className='m-auto' data-testid='unlockPage'>
-        <UnlockCard show={true}></UnlockCard>
+        <UnlockCard></UnlockCard>
       </div>
     </div>
   );

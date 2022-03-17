@@ -18,10 +18,6 @@ const {
 } = DappUI;
 
 const App = () => {
-  const [showConnectModal, setShowConnectModal] = useState(false);
-  function handleShowModal(showModal: boolean) {
-    setShowConnectModal(showModal);
-  }
   return (
     <Router>
       <DappProvider
@@ -30,25 +26,19 @@ const App = () => {
         completedTransactionsDelay={200}
       >
         <Layout>
-          <UnlockCard show={showConnectModal}></UnlockCard>
           <TransactionsToastList />
           <NotificationModal />
           <SignTransactionsModals className='custom-class-for-modals' />
           <Routes>
             <Route
               path={routeNames.unlock}
-              element={
-                <UnlockRoute
-                  loginRoute={routeNames.home}
-                  setModal={handleShowModal}
-                />
-              }
+              element={<UnlockRoute loginRoute={routeNames.home} />}
             />
             {routes.map((route: any, index: number) => (
               <Route
                 path={route.path}
                 key={'route-key-' + index}
-                element={<route.component setModal={handleShowModal} />}
+                element={<route.component />}
               />
             ))}
             <Route path='*' element={<PageNotFound />} />
