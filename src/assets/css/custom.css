@@ -206,7 +206,7 @@ a.connect:active {
   background-color: #004e79;
   color: #fff;
   padding: 1em 2em;
-  border-radius: 100px;
+  border-radius: 50px;
 }
 
 .radius {
@@ -224,8 +224,6 @@ a.connect:active {
   border: 1px solid #004e79 !important;
 }
 
-.modal-body{
-}
 /* Progress bar */
 
 .dapp-core-ui-component .toast-messages .toast.toast-visible .progress {

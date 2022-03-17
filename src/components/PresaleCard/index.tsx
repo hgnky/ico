@@ -67,7 +67,7 @@ function PresaleCard(props: any) {
                     props.setShowModal(true);
                   }}
                 >
-                  Connect
+                  &#128498; Connect
                 </span>
               ))}
           </div>

@@ -2,9 +2,7 @@ import React from 'react';
 import { logout, useGetAccountInfo } from '@elrondnetwork/dapp-core';
 import { Navbar as BsNavbar, NavItem, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { dAppName } from 'config';
 import { routeNames } from 'routes';
-import EclairConnectBlack from './../../../assets/img/eclair_black.png';
 import VitalLogo from './../../../assets/img/logo_header.png';
 
 const Navbar = () => {
@@ -40,7 +38,7 @@ const Navbar = () => {
               data-testid='loginBtn'
               onClick={handleLogout}
             >
-              <img width='10' height='15' src={EclairConnectBlack} />
+              &#128498;
               <span>Disconnect</span>
             </Link>
           ) : (
@@ -49,7 +47,7 @@ const Navbar = () => {
               className='btn connect mt-3'
               data-testid='loginBtn'
             >
-              <img width='10' height='15' src={EclairConnectBlack} />
+              &#128498;
               <span>Connect</span>
             </Link>
           )}
