@@ -19,8 +19,8 @@ function UnlockRoute(props: any) {
   }, [isLoggedIn]);
 
   return (
-    <div className='home d-flex flex-fill align-items-center d'>
-      <div className='m-auto' data-testid='unlockPage'>
+    <div className='container'>
+      <div className='row justify-content-center align-self-center py-2'>
         <UnlockCard></UnlockCard>
       </div>
     </div>

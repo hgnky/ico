@@ -11,7 +11,7 @@ function UnlockCard(props: any) {
     WalletConnectLoginButton
   } = DappUI;
   return (
-    <div className='px-4 card my-4 text-center'>
+    <div className='px-4 card my-4 d-flex col-10 col-md-8 col-lg-4 text-center'>
       <div className='card-body py-4 px-2 px-sm-2 mx-lg-4 d-flex flex-column'>
         <h4 className='mb-4'>Login</h4>
         <p className='mb-4'>Pick a login method</p>
