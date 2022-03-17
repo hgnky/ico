@@ -218,11 +218,14 @@ a.connect:active {
   right: 0.5rem;
 }
 
-.unlockButton {
+.unlockButton_wrapper {
   display: block;
-  background-color: #004e79;
+  background-color: #004e79 !important;
+  border: 1px solid #004e79 !important;
 }
 
+.modal-body{
+}
 /* Progress bar */
 
 .dapp-core-ui-component .toast-messages .toast.toast-visible .progress {

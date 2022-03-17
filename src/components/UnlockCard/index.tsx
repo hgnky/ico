@@ -23,19 +23,9 @@ function UnlockCard(props: any) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <div className='unlockCard px-4 card my-4 text-center'>
-          <div className='card-body py-4 px-2 px-sm-2 mx-lg-4 d-flex flex-column'>
-            <p className='mb-4 text-dark'>Select a login method</p>
-
-            <ExtensionLoginButton
-              onClick={() => {
-                console.log('test');
-                props.setShowModal(false);
-              }}
-              callbackRoute={routeNames.home}
-              loginButtonText={'Extension'}
-              className={'my-3 py-2 unlockButton'}
-            />
+        <div className='unlockCard text-center'>
+          <div className='card-body d-flex flex-column'>
+            <p className='text-dark'>Select a login method</p>
             <WebWalletLoginButton
               onClick={() => props.setShowModal(false)}
               callbackRoute={routeNames.home}
