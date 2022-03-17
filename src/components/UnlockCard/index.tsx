@@ -1,5 +1,5 @@
-import { DappUI } from '@elrondnetwork/dapp-core';
 import React from 'react';
+import { DappUI } from '@elrondnetwork/dapp-core';
 import Modal from 'react-bootstrap/esm/Modal';
 import { routeNames } from 'routes';
 

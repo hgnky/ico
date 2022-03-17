@@ -1,7 +1,7 @@
 import React from 'react';
 import { DappUI, useGetLoginInfo } from '@elrondnetwork/dapp-core';
-import { routeNames } from 'routes';
 import UnlockCard from 'components/UnlockCard';
+import { routeNames } from 'routes';
 
 function UnlockRoute(props: any) {
   const {

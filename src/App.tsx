@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { DappUI, DappProvider } from '@elrondnetwork/dapp-core';
+import { WalletConnectLoginContainer } from '@elrondnetwork/dapp-core/build/UI';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Layout from 'components/Layout';
+import UnlockCard from 'components/UnlockCard';
+import { environment } from 'config';
 import PageNotFound from 'pages/PageNotFound';
+import UnlockRoute from 'pages/UnlockPage';
 import { routeNames } from 'routes';
 import routes from 'routes';
 import '@elrondnetwork/dapp-core/build/index.css';
-import { environment } from 'config';
-import UnlockRoute from 'pages/UnlockPage';
-import UnlockCard from 'components/UnlockCard';
-import { WalletConnectLoginContainer } from '@elrondnetwork/dapp-core/build/UI';
 const {
   TransactionsToastList,
   SignTransactionsModals,
