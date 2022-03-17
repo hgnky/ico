@@ -17,14 +17,14 @@ function UnlockRoute(props: any) {
 
   React.useEffect(() => {
     if (isLoggedIn) {
-      window.location.href = routeNames.dashboard;
+      window.location.href = routeNames.home;
     }
   }, [isLoggedIn]);
 
   return (
     <div className='home d-flex flex-fill align-items-center d'>
       <div className='m-auto' data-testid='unlockPage'>
-        <UnlockCard></UnlockCard>
+        <UnlockCard show={true}></UnlockCard>
       </div>
     </div>
   );

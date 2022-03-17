@@ -6,7 +6,6 @@ import Transaction from './pages/Transaction';
 
 export const routeNames = {
   home: '/',
-  dashboard: '/dashboard',
   transaction: '/transaction',
   unlock: '/unlock',
   ledger: '/ledger',
@@ -18,12 +17,6 @@ const routes: Array<any> = [
     path: routeNames.home,
     title: 'Home',
     component: Home
-  },
-  {
-    path: routeNames.dashboard,
-    title: 'Dashboard',
-    component: Dashboard,
-    authenticatedRoute: true
   },
   {
     path: routeNames.transaction,

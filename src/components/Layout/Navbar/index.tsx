@@ -11,7 +11,7 @@ const Navbar = () => {
   const { address } = useGetAccountInfo();
 
   const handleLogout = () => {
-    logout(`${window.location.origin}/unlock`);
+    logout(`${window.location.origin}`);
   };
 
   const isLoggedIn = Boolean(address);
@@ -35,7 +35,7 @@ const Navbar = () => {
           </Nav.Link>
           {isLoggedIn ? (
             <Link
-              to={routeNames.unlock}
+              to={routeNames.home}
               className='btn connect mt-3'
               data-testid='loginBtn'
               onClick={handleLogout}

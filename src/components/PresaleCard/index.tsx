@@ -5,10 +5,10 @@ import { ReactComponent as HeartIcon } from '../../../assets/img/heart.svg';
 import EclairConnectBlack from './../../assets/img/eclair_black.png';
 
 function PresaleCard(props: any) {
+  console.log(props);
   const [amount, setAmount] = useState(1);
   const [showMaxPerTransactionWarning, setShowMaxPerTransactionWarning] =
     useState(false);
-  const [showModal, setShowModal] = useState(false);
   return (
     <div className='col mb-5' style={{ opacity: props.isActive ? 1 : 0.5 }}>
       <div className='card h-100 radius'>
@@ -64,7 +64,7 @@ function PresaleCard(props: any) {
                   className='btn connect mt-3'
                   data-testid='loginBtn'
                   onClick={() => {
-                    setShowModal(true);
+                    props.setShowModal(true);
                   }}
                 >
                   Connect

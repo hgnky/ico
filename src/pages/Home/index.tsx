@@ -14,10 +14,10 @@ import {
   environment,
   tokenIdentifier
 } from 'config';
-import { routeNames } from 'routes';
 import PresaleCard from '../../components/PresaleCard';
 
-const Home = () => {
+function Home(props: any) {
+  console.log(props);
   const { address } = useGetAccountInfo();
   const [supply, setSupply] = useState(10000000000000);
   const [balance, setBalance] = useState(0);
@@ -102,6 +102,7 @@ const Home = () => {
         <div className='container'>
           <div className='row'>
             <PresaleCard
+              setShowModal={props.setModal}
               isActive={true}
               isLogged={isLoggedIn}
               round='Round 1'
@@ -109,7 +110,6 @@ const Home = () => {
               egldprice={0.75}
               vitalprice='0.00000000075 EGLD'
               transaction={sendBuyTransaction}
-              showTooltip={true}
             />
             <PresaleCard
               isLogged={isLoggedIn}
@@ -130,7 +130,7 @@ const Home = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Home;
 function setTransactionSessionId(sessionId: string) {
