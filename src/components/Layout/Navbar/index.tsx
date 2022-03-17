@@ -4,7 +4,7 @@ import { Navbar as BsNavbar, NavItem, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { routeNames } from 'routes';
 import VitalLogo from './../../../assets/img/logo_header.png';
-
+import { BsFillLightningChargeFill } from 'react-icons/bs';
 const Navbar = () => {
   const { address } = useGetAccountInfo();
 
@@ -38,7 +38,7 @@ const Navbar = () => {
               data-testid='loginBtn'
               onClick={handleLogout}
             >
-              &#128498;
+              <BsFillLightningChargeFill />
               <span>Disconnect</span>
             </Link>
           ) : (
@@ -47,7 +47,7 @@ const Navbar = () => {
               className='btn connect mt-3'
               data-testid='loginBtn'
             >
-              &#128498;
+              <BsFillLightningChargeFill />
               <span>Connect</span>
             </Link>
           )}

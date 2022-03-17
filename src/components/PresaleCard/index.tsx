@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { routeNames } from 'routes';
 import { ReactComponent as HeartIcon } from '../../../assets/img/heart.svg';
 import EclairConnectBlack from './../../assets/img/eclair_black.png';
-
+import { BsFillLightningChargeFill } from 'react-icons/bs';
 function PresaleCard(props: any) {
   const [amount, setAmount] = useState(1);
   const [showMaxPerTransactionWarning, setShowMaxPerTransactionWarning] =
@@ -67,7 +67,9 @@ function PresaleCard(props: any) {
                   //   props.setShowModal(true);
                   // }}
                 >
-                  <span>&#128498; Connect</span>
+                  <span>
+                    <BsFillLightningChargeFill /> Connect
+                  </span>
                 </Link>
               ))}
           </div>
