@@ -18,7 +18,11 @@ function PresaleCard(props: any) {
           {(1000000000 * amount).toLocaleString()}
           <span className='vital_token'></span>
         </span>
-        <span className='supply'>Supply {props.supply.toLocaleString()}</span>
+        <span className='supply'>
+          {props.supply > 0
+            ? `Supply ${props.supply.toLocaleString()}`
+            : 'SOLD OUT!'}
+        </span>
         <div className='card-body p-4'>
           <div className='text-center'>
             <span
