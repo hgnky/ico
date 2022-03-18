@@ -32,7 +32,7 @@ function Home(props: any) {
       .then((res) => {
         const token = res.data;
         const tempBalance = token['balance'] / Math.pow(10, token['decimals']);
-        setSupply(10000000000000 - (3334000000000 - tempBalance));
+        setSupply(6667000000000 - tempBalance);
         setBalance(tempBalance);
       });
   }, []);
