@@ -75,7 +75,7 @@ function Home(props: any) {
               </p>
               <p className='text-center text-white'>Remaining supply</p>
               <span className='token_remain'>
-                {supply.toLocaleString()}
+                {balance.toLocaleString()}
                 <span className='vital_token'></span>
               </span>
             </div>
