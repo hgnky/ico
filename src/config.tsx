@@ -1,5 +1,5 @@
 export const contractAddress =
-  'erd1qqqqqqqqqqqqqpgqqsm4w48w90m4x6z5ehfhtgzkw0x2rw9l7yqs4du3av';
+  'erd1qqqqqqqqqqqqqpgqjhw9wgjfzsq4084x3cq63c6tztzljewd7yqsvwh8u6';
 
 export const dAppName = 'Vital Network ICO';
 

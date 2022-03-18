@@ -108,20 +108,20 @@ function Home(props: any) {
               vitalprice='0.00000000075 EGLD'
             />
             <PresaleCard
-              isActive={true}
               isLogged={isLoggedIn}
               round='Round 2'
-              supply={balance}
+              supply={0}
               egldprice={1.15}
               vitalprice='0.00000000115 EGLD'
-              transaction={sendBuyTransaction}
             />
             <PresaleCard
+              isActive={true}
               isLogged={isLoggedIn}
               round='Round 3'
-              supply={3333000000000}
+              supply={balance}
               egldprice={1.45}
               vitalprice='0.00000000145 EGLD'
+              transaction={sendBuyTransaction}
             />
           </div>
         </div>
