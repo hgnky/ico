@@ -17,7 +17,6 @@ import {
 import PresaleCard from '../../components/PresaleCard';
 
 function Home(props: any) {
-  console.log(props);
   const { address } = useGetAccountInfo();
   const [supply, setSupply] = useState(10000000000000);
   const [balance, setBalance] = useState(0);
@@ -102,21 +101,20 @@ function Home(props: any) {
         <div className='container'>
           <div className='row'>
             <PresaleCard
-              setShowModal={props.setModal}
-              isActive={true}
               isLogged={isLoggedIn}
               round='Round 1'
-              supply={balance}
+              supply={0}
               egldprice={0.75}
               vitalprice='0.00000000075 EGLD'
-              transaction={sendBuyTransaction}
             />
             <PresaleCard
+              isActive={true}
               isLogged={isLoggedIn}
               round='Round 2'
-              supply={3333000000000}
+              supply={balance}
               egldprice={1.15}
               vitalprice='0.00000000115 EGLD'
+              transaction={sendBuyTransaction}
             />
             <PresaleCard
               isLogged={isLoggedIn}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsFillLightningChargeFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { routeNames } from 'routes';
@@ -8,6 +8,7 @@ function PresaleCard(props: any) {
   const [amount, setAmount] = useState(1);
   const [showMaxPerTransactionWarning, setShowMaxPerTransactionWarning] =
     useState(false);
+
   return (
     <div className='col mb-5' style={{ opacity: props.isActive ? 1 : 0.5 }}>
       <div className='card h-100 radius'>
@@ -50,22 +51,24 @@ function PresaleCard(props: any) {
                   className='btn connect mt-3'
                   data-testid='loginBtn'
                   onClick={() => {
-                    if (props.isActive)
+                    if (props.isActive) {
                       props.transaction(
-                        (props.egldprice * amount * Math.pow(10, 18)).toString()
+                        (
+                          (Math.round(props.egldprice * amount * 100) / 100) *
+                          Math.pow(10, 18)
+                        ).toString()
                       );
+                    }
                   }}
                 >
-                  Buy for {props.egldprice * amount} EGLD
+                  Buy for {Math.round(props.egldprice * amount * 100) / 100}{' '}
+                  EGLD
                 </span>
               ) : (
                 <Link
                   to={routeNames.unlock}
                   className='btn connect mt-3'
                   data-testid='loginBtn'
-                  // onClick={() => {
-                  //   props.setShowModal(true);
-                  // }}
                 >
                   <span>
                     <BsFillLightningChargeFill /> Connect
