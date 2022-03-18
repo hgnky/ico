@@ -1,10 +1,10 @@
 import React from 'react';
 import { logout, useGetAccountInfo } from '@elrondnetwork/dapp-core';
 import { Navbar as BsNavbar, NavItem, Nav } from 'react-bootstrap';
+import { BsFillLightningChargeFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { routeNames } from 'routes';
 import VitalLogo from './../../../assets/img/logo_header.png';
-import { BsFillLightningChargeFill } from 'react-icons/bs';
 const Navbar = () => {
   const { address } = useGetAccountInfo();
 

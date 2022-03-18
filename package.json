@@ -25,6 +25,7 @@
     "start": "react-scripts start",
     "start-testnet": "npm run copy-testnet-config & npm run start",
     "start-devnet": "npm run copy-devnet-config & npm run start",
+    "pretty-code": "prettier --write . && npm run lint -- --fix",
     "build": "react-scripts build",
     "build-testnet": "npm run copy-testnet-config & npm run build",
     "build-devnet": "npm run copy-devnet-config & npm run build",
