@@ -21,10 +21,7 @@ function Home(props: any) {
   const [supply, setSupply] = useState(10000000000000);
   const [balance, setBalance] = useState(0);
   const isLoggedIn = Boolean(address);
-  const gateway =
-    environment === 'devnet'
-      ? 'https://devnet-api.elrond.com'
-      : 'https://api.elrond.com';
+  const gateway = 'https://api.elrond.com';
   useEffect(() => {
     axios
       .get(`${gateway}/accounts/${contractAddress}/tokens/${tokenIdentifier}`)
