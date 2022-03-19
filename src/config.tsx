@@ -1,8 +1,8 @@
 export const contractAddress =
-  'erd1qqqqqqqqqqqqqpgqjhw9wgjfzsq4084x3cq63c6tztzljewd7yqsvwh8u6';
+  'erd1qqqqqqqqqqqqqpgqvd8gwve0urfmknvjsmudgw7yl7pfwlt56egsfv2ep5';
 
 export const dAppName = 'Vital Network ICO';
 
-export const tokenIdentifier = 'VITAL-37ddaf';
+export const tokenIdentifier = 'VITAL-bc0917';
 
-export const environment = 'devnet';
+export const environment = 'mainnet';
