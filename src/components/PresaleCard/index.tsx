@@ -28,8 +28,10 @@ function PresaleCard(props: any) {
             <span
               className='minus'
               onClick={() => {
-                if (amount > 1 && props.isActive) setAmount(amount - 1);
-                if (amount == 20) setShowMaxPerTransactionWarning(false);
+                if (props.isActive) {
+                  if (amount > 1 && props.isActive) setAmount(amount - 1);
+                  if (amount == 20) setShowMaxPerTransactionWarning(false);
+                }
               }}
             >
               <i className='fa fa-minus'></i>
@@ -38,8 +40,10 @@ function PresaleCard(props: any) {
             <span
               className='plus'
               onClick={() => {
-                if (amount < 20 && props.isActive) setAmount(amount + 1);
-                else setShowMaxPerTransactionWarning(true);
+                if (props.isActive) {
+                  if (amount < 20 && props.isActive) setAmount(amount + 1);
+                  else setShowMaxPerTransactionWarning(true);
+                }
               }}
             >
               <i className='fa fa-plus'></i>
