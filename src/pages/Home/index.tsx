@@ -84,13 +84,13 @@ function Home(props: any) {
               <ProgressBar
                 label={`${
                   Math.round(
-                    ((10000000000000 - balance) / 10000000000000) * 100 * 100
+                    ((3330000000000 - balance) / 3330000000000) * 100 * 100
                   ) / 100
                 }%`}
                 animated={true}
                 min={0}
                 max={100}
-                now={((10000000000000 - balance) / 10000000000000) * 100}
+                now={((3330000000000 - balance) / 3330000000000) * 100}
               ></ProgressBar>
             </div>
           </div>
